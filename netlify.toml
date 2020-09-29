@@ -1,0 +1,30 @@
+/about                  /about
+/projects               /projects
+/projects/*             /projects/:projectPath
+/articles               /articles
+/articles/*             /articles/:articlePath
+
+
+[[redirects]]
+  from = "/about"
+  to = "/about"
+
+[[redirects]]
+  from = "/projects"
+  to = "/projects"
+
+[[redirects]]
+  from = "/projects/*"
+  to = "/projects/:projectPath"
+
+[[redirects]]
+  from = "/articles"
+  to = "articles"
+
+[[redirects]]
+  from = "/articles/*"
+  to = "/articles/:articlePath"
+
+[[redirects]]
+  from = "/about"
+  to = "about"
