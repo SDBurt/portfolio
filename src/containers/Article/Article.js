@@ -12,7 +12,6 @@ const Article = (props) => {
     const articlePath = props.match.params.articlePath
 
     useEffect(() => {
-        console.log('[article] useEffect');
         setarticle(
             data.find(article => {
                 return (

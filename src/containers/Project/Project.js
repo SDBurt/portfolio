@@ -12,8 +12,6 @@ const Project = (props) => {
     const projectPath = props.match.params.projectPath
 
     useEffect(() => {
-
-        console.log('[Project] useEffect');
         setproject(
             data.find(project => {
                 return (

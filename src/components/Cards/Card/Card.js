@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import classes from './Card.module.css';
 
 const SingleCard = (props) => {
-    console.log(props)
     return (
         <Card className={classes.Card}>
             <Card.Img

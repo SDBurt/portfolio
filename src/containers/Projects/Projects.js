@@ -8,8 +8,6 @@ const Projects = (props) => {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
-        console.log('[Projects] Data is ', data);
-        console.log('[Projects] useEffect. Props:', props);
         setProjects(data);
     }, [])
 

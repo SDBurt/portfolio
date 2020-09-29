@@ -8,8 +8,6 @@ const Srticles = (props) => {
     const [articles, setarticles] = useState([])
 
     useEffect(() => {
-        console.log('[articles] Data is ', data);
-        console.log('[articles] useEffect');
         setarticles(data);
     }, [])
 

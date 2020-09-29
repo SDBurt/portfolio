@@ -9,7 +9,6 @@ const Cards = (props) => {
     let cards = <p>No projects at the moment.</p>
 
     if (props.cardData) {
-        console.log("[Cards]: Props", props)
         cards = props.cardData.map((card) => {
             return (
                 <Card
