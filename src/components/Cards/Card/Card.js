@@ -1,11 +1,13 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 import { Link } from 'react-router-dom';
 
-import classes from './ProjectCard.module.css';
+import classes from './Card.module.css';
 
-const ProjectCard = (props) => {
+const SingleCard = (props) => {
+    console.log(props)
     return (
         <Card className={classes.Card}>
             <Card.Img
@@ -16,17 +18,19 @@ const ProjectCard = (props) => {
             />
             <Card.Body>
                 <Card.Title className={classes.Title}>{props.title}</Card.Title>
+                <Card.Text className={[classes.Subtext, "text-muted"].join(' ')}>{props.updated}</Card.Text>
                 <Card.Text className={classes.Text}>
-                    {props.text}
+                    {props.text.slice(0, 200)}...
                 </Card.Text>
-                <Card.Text className={classes.Subtext}>{props.updated}</Card.Text>
-                <Link to={`projects/${props.path}`}>
-                    <button type="button"> View More</button>
-                </Link>
-            </Card.Body>
-        </Card >
 
+            </Card.Body>
+            <Card.Footer>
+                <Link to={props.path}>
+                    <Button variant="primary">See More</Button>
+                </Link>
+            </Card.Footer>
+        </Card >
     )
 }
 
-export default ProjectCard
+export default SingleCard

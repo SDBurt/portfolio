@@ -1,0 +1,16 @@
+.CenterText {
+    text-align: center;
+}
+
+.JustifyContent {
+    display: flex;
+    justify-content: center;
+}
+
+.MinWidth500 {
+    min-width: 500px;
+}
+
+.Img {
+    margin-bottom: 20px;
+}
