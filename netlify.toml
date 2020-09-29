@@ -1,10 +1,3 @@
-/about                  /about
-/projects               /projects
-/projects/*             /projects/:projectPath
-/articles               /articles
-/articles/*             /articles/:articlePath
-
-
 [[redirects]]
   from = "/about"
   to = "/about"
