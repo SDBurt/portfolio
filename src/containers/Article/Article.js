@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import ReactMarkdown from 'react-markdown';
 
 import data from '../../data/articles'
 import classes from './Article.module.css'
+
 
 const Article = (props) => {
 
@@ -44,7 +46,7 @@ const Article = (props) => {
         if (article.content) {
             renderContent = (
                 <Row >
-                    <p>{article.content}</p>
+                    <ReactMarkdown source={article.content} />
                 </Row>
             )
         }

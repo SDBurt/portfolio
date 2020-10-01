@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import ReactMarkdown from 'react-markdown';
 
 import data from '../../data/projects'
 import classes from './Project.module.css'
@@ -44,7 +45,7 @@ const Project = (props) => {
         if (project.content) {
             renderContent = (
                 <Row >
-                    <p>{project.content}</p>
+                    <ReactMarkdown source={project.content} />
                 </Row>
             )
         }
