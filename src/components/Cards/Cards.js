@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-
 import CardDeck from 'react-bootstrap/CardDeck';
 import Card from './Card/Card';
 
@@ -10,14 +9,16 @@ const Cards = (props) => {
 
     if (props.cardData) {
         cards = props.cardData.map((card) => {
+            const iconUrl = typeof card.icon !== 'undefined' ? card.icon.fields.file.url : null
             return (
                 <Card
-                    // img={Img1}
+                    img={iconUrl}
                     key={card.path}
                     imgAlt={card.imageAlt}
                     title={card.title}
                     text={card.content}
                     updated={card.updatedAt}
+                    footer={card.footer}
                     path={`${props.path}/${card.path}`}
                 />
             )

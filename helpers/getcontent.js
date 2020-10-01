@@ -14,7 +14,7 @@ const client = createClient({
 });
 
 const TYPES = [
-    'projects', 'articles'
+    'projects', 'articles', 'home', 'social', 'about'
 ];
 
 export const getContent = () => {

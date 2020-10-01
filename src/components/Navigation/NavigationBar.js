@@ -5,10 +5,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import NavbarItems from './NavigationItems/NavbarItems';
+import classes from './NavigationBar.module.css';
 
 const NavigationBar = props => {
     return (
-        <Navbar bg="light" expand="sm">
+        <Navbar bg="light" expand="sm" className={classes.NavBar}>
             <Navbar.Brand href="/">{props.brand}</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end">
