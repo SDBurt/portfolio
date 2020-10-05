@@ -14,3 +14,7 @@
 .Img {
     margin-bottom: 20px;
 }
+
+p img {
+    width: 100%
+}

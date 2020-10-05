@@ -2,12 +2,11 @@ import React from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import Papers from '../../components/Papers/Papers';
-
 import Hero from '../../components/Hero/Hero';
 import homeData from '../../data/home'
 import projectData from '../../data/projects'
 import articleData from '../../data/articles'
+import Cards from '../../components/Cards/Cards';
 
 import classes from './Home.module.css';
 
@@ -23,30 +22,32 @@ const Home = () => {
         <div>
             <header>
                 <Row className="justify-content-center">
-                    <Col md={8}>
+                    <Col md={12}>
                         {renderHero}
                     </Col>
                 </Row>
             </header>
             <section className={classes.Content}>
-                <Row>
-                    <Col>
-                        <h2 className="text-center extra-margin-bot">Projects</h2>
-                        <hr />
-                        <Papers path="projects" paperData={projectData} />
-                    </Col>
-
-                </Row>
+                <h1 className='text-center'>Projects</h1>
+                <hr />
+                <Cards
+                    path='projects'
+                    cardData={projectData}
+                    showCardImgs={false}
+                    showCardHeaders={false}
+                    showCardFooters={false}
+                />
             </section>
             <section className={classes.Content}>
-                <Row>
-                    <Col>
-                        <h2 className="text-center extra-margin-bot">Articles</h2>
-                        <hr />
-                        <Papers path="articles" paperData={articleData} />
-                    </Col>
-
-                </Row>
+                <h1 className='text-center'>Projects</h1>
+                <hr />
+                <Cards
+                    path='articles'
+                    cardData={articleData}
+                    showCardImgs={false}
+                    showCardHeaders={false}
+                    showCardFooters={false}
+                />
             </section>
         </div>
     )

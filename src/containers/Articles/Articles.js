@@ -15,7 +15,13 @@ const Srticles = (props) => {
         <div>
             <h1 className='text-center extra-margin-bot'>Articles</h1>
             <hr />
-            <Cards path={props.match.path} cardData={articles} />
+            <Cards
+                path={props.match.path}
+                cardData={articles}
+                showCardImgs={true}
+                showCardHeaders={false}
+                showCardFooters={false}
+            />
         </div>
     )
 }

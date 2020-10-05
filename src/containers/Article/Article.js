@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ReactMarkdown from 'react-markdown';
+import moment from 'moment';
 
 import data from '../../data/articles'
 import classes from './Article.module.css'
@@ -21,42 +22,63 @@ const Article = (props) => {
                 )
             })
         );
+
     }, [articlePath])
 
     let renderImage = null;
     let renderTitle = null;
     let renderContent = null;
+    let renderUpdated = null;
+
+
 
     if (article !== null) {
 
         if (article.icon) {
             renderImage = (
                 <Row className="justify-content-center">
-                    <img className={classes.Img} src={article.icon.fields.file.url} alt={article.icon.fields.title} />
+                    <Col>
+                        <img className={classes.Img} src={article.icon.fields.file.url} alt={article.icon.fields.title} />
+                    </Col>
                 </Row>
             )
         }
         if (article.title) {
             renderTitle = (
                 <Row className="justify-content-center">
-                    <h1>{article.title}</h1>
+                    <Col><h1>{article.title}</h1></Col>
+
                 </Row>
             )
         }
         if (article.content) {
             renderContent = (
-                <Row >
-                    <ReactMarkdown source={article.content} />
+                <Row>
+                    <Col>
+                        <ReactMarkdown source={article.content} />
+                    </Col>
                 </Row>
             )
         }
+
+        if (article.updatedAt) {
+            const updated = moment(article.updatedAt).fromNow();
+            renderUpdated = (
+                <Row>
+                    <Col>
+                        <p>Last Updated: {updated}</p>
+                    </Col>
+                </Row>);
+        }
+
     }
 
     return (
         <Row className="justify-content-center">
-            <Col md={8}>
+            <Col lg={8}>
                 {renderImage}
                 {renderTitle}
+                {renderUpdated}
                 {renderContent}
             </Col>
         </Row>

@@ -1,5 +1,7 @@
 .Card {
     color: #222;
+    transition: opacity 100ms, transform 100ms;
+    transform: scale(1);
 }
 
 .Title {
@@ -8,4 +10,8 @@
 
 .Text {
     color: #111;
+}
+
+.cardHighlighted {
+    transform: scale(1.01);
 }

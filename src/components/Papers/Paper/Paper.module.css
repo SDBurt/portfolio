@@ -17,3 +17,12 @@
 .Footer {
     margin-top: .75rem;
 }
+
+.card-appear {
+    opacity: 0.01;
+}
+
+.card-appear-card-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}

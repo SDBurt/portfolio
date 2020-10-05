@@ -18,7 +18,8 @@ const Papers = props => {
                         content={data.content || data.summary}
                     />
                 </Link>
-            </Col>
+            </Col >
+
         )
     })
 
