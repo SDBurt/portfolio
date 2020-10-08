@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ReactMarkdown from 'react-markdown';
+import moment from 'moment';
 
 import data from '../../data/projects'
 import classes from './Project.module.css'
@@ -25,6 +26,7 @@ const Project = (props) => {
     let renderImage = null;
     let renderTitle = null;
     let renderContent = null;
+    let renderUpdated = null;
 
     if (project !== null) {
 
@@ -35,6 +37,7 @@ const Project = (props) => {
                 </Row>
             )
         }
+
         if (project.title) {
             renderTitle = (
                 <Row className="justify-content-center">
@@ -44,6 +47,7 @@ const Project = (props) => {
                 </Row>
             )
         }
+
         if (project.content) {
             renderContent = (
                 <Row >
@@ -53,6 +57,16 @@ const Project = (props) => {
                 </Row>
             )
         }
+
+        if (project.updatedAt) {
+            const updated = moment(project.updatedAt).format("MMM. Do, YYYY");
+            renderUpdated = (
+                <Row>
+                    <Col>
+                        <p className="text-muted">Last Updated: {updated}</p>
+                    </Col>
+                </Row>);
+        }
     }
 
     return (
@@ -60,6 +74,7 @@ const Project = (props) => {
             <Col md={8}>
                 {renderImage}
                 {renderTitle}
+                {renderUpdated}
                 {renderContent}
             </Col>
         </Row>

@@ -9,7 +9,7 @@ import classes from './NavigationBar.module.css';
 
 const NavigationBar = props => {
     return (
-        <Navbar bg="light" expand="sm" className={classes.NavBar}>
+        <Navbar bg="light" variant="light" expand="sm" className={classes.NavBar}>
             <Navbar.Brand href="/">{props.brand}</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end">

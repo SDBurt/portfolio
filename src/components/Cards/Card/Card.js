@@ -17,7 +17,7 @@ const SingleCard = (props) => {
         </Card.Header>
     ) : null
 
-    const renderFooter = props.showFooter && props.footer ? (
+    const renderFooter = props.showFooter ? (
         <Card.Footer>
             <Link to={props.path}>
                 <Button variant="primary">See More</Button>
@@ -40,7 +40,7 @@ const SingleCard = (props) => {
 
     return (
         <Card
-            className={[classes.Card, cardAnimationCSS].join(' ')}
+            className={[classes.Card, cardAnimationCSS, "noborder"].join(' ')}
             onMouseEnter={() => setCardHighlighted(true)}
             onMouseLeave={() => setCardHighlighted(false)}
         >

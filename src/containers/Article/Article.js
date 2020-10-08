@@ -63,11 +63,11 @@ const Article = (props) => {
         }
 
         if (article.updatedAt) {
-            const updated = moment(article.updatedAt).fromNow();
+            const updated = moment(article.updatedAt).format("MMM. Do, YYYY");
             renderUpdated = (
                 <Row>
                     <Col>
-                        <p>Last Updated: {updated}</p>
+                        <p className="text-muted">{updated}</p>
                     </Col>
                 </Row>);
         }

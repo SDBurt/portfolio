@@ -39,3 +39,7 @@ ul li {
 .width100 {
     width: 100%;
 }
+
+.noborder {
+    border: none;
+}
