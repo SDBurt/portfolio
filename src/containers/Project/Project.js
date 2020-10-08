@@ -31,21 +31,25 @@ const Project = (props) => {
         if (project.icon) {
             renderImage = (
                 <Row className="justify-content-center">
-                    <img className={classes.Img} src={project.icon.fields.file.url} alt={project.icon.fields.title} />
+                    <Col><img className={classes.Img} src={project.icon.fields.file.url} alt={project.icon.fields.title} /></Col>
                 </Row>
             )
         }
         if (project.title) {
             renderTitle = (
                 <Row className="justify-content-center">
-                    <h1>{project.title}</h1>
+                    <Col>
+                        <h1>{project.title}</h1>
+                    </Col>
                 </Row>
             )
         }
         if (project.content) {
             renderContent = (
                 <Row >
-                    <ReactMarkdown source={project.content} />
+                    <Col>
+                        <ReactMarkdown source={project.content} />
+                    </Col>
                 </Row>
             )
         }

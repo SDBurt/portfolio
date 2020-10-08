@@ -46,8 +46,9 @@ const Article = (props) => {
         if (article.title) {
             renderTitle = (
                 <Row className="justify-content-center">
-                    <Col><h1>{article.title}</h1></Col>
-
+                    <Col>
+                        <h1>{article.title}</h1>
+                    </Col>
                 </Row>
             )
         }
