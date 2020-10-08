@@ -39,10 +39,10 @@ const Home = () => {
                 />
             </section>
             <section className={classes.Content}>
-                <h1 className='text-center'>Projects</h1>
+                <h1 className='text-center'>Blog</h1>
                 <hr />
                 <Cards
-                    path='articles'
+                    path='blog'
                     cardData={articleData}
                     showCardImgs={false}
                     showCardHeaders={false}

@@ -7,7 +7,7 @@ function NavbarItems() {
         <React.Fragment>
             <NavbarItem exact link="/">Home</NavbarItem>
             <NavbarItem link="/projects">Projects</NavbarItem>
-            <NavbarItem link="/articles">Articles</NavbarItem>
+            <NavbarItem link="/blog">Blog</NavbarItem>
             <NavbarItem link="/about">About</NavbarItem>
         </React.Fragment>
     )

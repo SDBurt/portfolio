@@ -15,8 +15,8 @@ export default () => {
             <Route path='/about' exact component={About} />
             <Route path='/projects' exact render={(props) => <Projects {...props} />} />
             <Route path='/projects/:projectPath' render={(props) => <Project {...props} />} />
-            <Route path='/articles' exact render={(props) => <Articles {...props} />} />
-            <Route path='/articles/:articlePath' render={(props) => <Article {...props} />} />
+            <Route path='/blog' exact render={(props) => <Articles {...props} />} />
+            <Route path='/blog/:articlePath' render={(props) => <Article {...props} />} />
             <Route path='/' exact component={Home} />
             <Route component={Error} />
         </Switch>)

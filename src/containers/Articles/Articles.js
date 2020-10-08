@@ -13,7 +13,7 @@ const Srticles = (props) => {
 
     return (
         <div>
-            <h1 className='text-center extra-margin-bot'>Articles</h1>
+            <h1 className='text-center extra-margin-bot'>Blog</h1>
             <hr />
             <Cards
                 path={props.match.path}
