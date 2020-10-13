@@ -18,7 +18,7 @@ const Srticles = (props) => {
             <Cards
                 path={props.match.path}
                 cardData={articles}
-                showCardImgs={true}
+                showCardImgs={false}
                 showCardHeaders={false}
                 showCardFooters={false}
             />

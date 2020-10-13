@@ -18,7 +18,7 @@ const Projects = (props) => {
             <Cards
                 path={props.match.path}
                 cardData={projects}
-                showCardImgs={true}
+                showCardImgs={false}
                 showCardHeaders={false}
                 showCardFooters={false}
             />
