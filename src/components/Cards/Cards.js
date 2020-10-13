@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
-import CardDeck from 'react-bootstrap/CardDeck';
 import Card from './Card/Card';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import classes from './Cards.module.css';
 
 const Cards = (props) => {
 
@@ -28,29 +32,34 @@ const Cards = (props) => {
         cards = props.cardData.map((card) => {
             const iconUrl = typeof card.icon !== 'undefined' ? card.icon.fields.file.url : null
             return (
-                <Card
-                    key={card.title}
-                    className="transition-card"
-                    img={iconUrl}
-                    imgAlt={card.imageAlt}
-                    title={card.title}
-                    text={card.content}
-                    updated={card.updatedAt}
-                    footer={card.footer}
-                    path={`${props.path}/${card.path}`}
-                    showImg={props.showCardImgs}
-                    showHeader={props.showCardHeaders}
-                    showFooter={props.showCardFooters}
-                />
+                <Row className={classes.CardRow} key={card.title}>
+                    <Col>
+                        <Card
+
+                            className="transition-card"
+                            img={iconUrl}
+                            imgAlt={card.imageAlt}
+                            title={card.title}
+                            text={card.content}
+                            updated={card.updatedAt}
+                            footer={card.footer}
+                            path={`${props.path}/${card.path}`}
+                            showImg={props.showCardImgs}
+                            showHeader={props.showCardHeaders}
+                            showFooter={props.showCardFooters}
+                        />
+                    </Col>
+                </Row>
+
 
             )
         })
     }
 
     return (
-        <CardDeck>
-            {cards}
-        </CardDeck>
+        <div>{cards}</div>
+
+
     )
 }
 

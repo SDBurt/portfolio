@@ -1,12 +1,13 @@
 .Card {
     color: #222;
+    /* background-color: #7facc7 !important; */
     transition: opacity 100ms, transform 100ms;
-    transform: scale(1);
     border: none !important;
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+    
 }
 
 .Title {
+    /* color: #1d3557; */
     color: #111;
 }
 
@@ -15,5 +16,6 @@
 }
 
 .cardHighlighted {
-    transform: scale(1.01);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+    background-color: #eeeeee !important;
 }
