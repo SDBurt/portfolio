@@ -18,12 +18,23 @@ const Home = () => {
         )
     })
 
+    const renderStatus = homeData.map((data) => {
+        return (
+            <p style={{ padding: '10px', fontStyle: 'italic' }}>{data.status}</p>
+        )
+    })
+
     return (
         <div>
             <header>
                 <Row className="justify-content-center">
                     <Col md={12}>
                         {renderHero}
+                    </Col>
+                </Row>
+                <Row className="justify-content-center">
+                    <Col md={12}>
+                        {renderStatus}
                     </Col>
                 </Row>
             </header>
