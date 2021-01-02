@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Hero from '../../components/Hero/Hero';
 import homeData from '../../data/home'
 import projectData from '../../data/projects'
-import articleData from '../../data/articles'
+// import articleData from '../../data/articles'
 import Cards from '../../components/Cards/Cards';
 
 import classes from './Home.module.css';
