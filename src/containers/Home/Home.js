@@ -49,7 +49,7 @@ const Home = () => {
                     showCardFooters={false}
                 />
             </section>
-            <section className={classes.Content}>
+            {/* <section className={classes.Content}>
                 <h1 className='text-center'>Blog</h1>
                 <hr />
                 <Cards
@@ -59,7 +59,7 @@ const Home = () => {
                     showCardHeaders={false}
                     showCardFooters={false}
                 />
-            </section>
+            </section> */}
         </div>
     )
 }

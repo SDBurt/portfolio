@@ -3,7 +3,7 @@ import Cards from '../../components/Cards/Cards';
 
 import data from '../../data/articles'
 
-const Srticles = (props) => {
+const Article = (props) => {
 
     const [articles, setarticles] = useState([])
 
@@ -26,4 +26,4 @@ const Srticles = (props) => {
     )
 }
 
-export default Srticles;
+export default Article;
